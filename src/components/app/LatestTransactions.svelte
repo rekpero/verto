@@ -4,8 +4,7 @@
   import moment from "moment";
   import { equals } from "arql-ops";
 
-  let client;
-  let transactions = getLatestTransactions();
+  let transactions = getLatestTransactions(); // await block needs a promise
 
   function roundCurrency (val: number | string): string {
     if(val === "?") return val;
@@ -13,6 +12,7 @@
     return val.toFixed(7);
   }
 
+  // create the promise for the await block
   async function getLatestTransactions (): Promise<{ id: string, amount: number, status: string }[]> {
     if(!process.browser) return [];
 
@@ -99,4 +99,5 @@
 
     &:first-child
       padding-top: 3.5em
+      
 </style>
