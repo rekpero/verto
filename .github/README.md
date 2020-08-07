@@ -6,7 +6,7 @@
   <h3 align="center">Verto</h3>
 
   <p align="center">
-    A decentralized PST exchange for Arweave
+    A decentralized PST exchange for <a href="https://arweave.org">Arweave</a>
  </p>
 </p>
 
@@ -43,6 +43,7 @@ yarn run export
 
 - [Sam Williams](https://twitter.com/samecwilliams)
 - [Cedrik Boudreau](https://github.com/cedriking)
+- [Aidan Ok](https://github.com/aidanok)
 
 ## License
 
