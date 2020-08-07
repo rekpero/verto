@@ -60,20 +60,20 @@
 <div class="section">
   <h1 class="title">Transactions</h1>
   <table>
-      <tr>
-          <th style="text-transform: none">TxID</th>
-          <th>Amount</th>
-      </tr>
-      {#await transactions}
-          <p>Loading...</p>
-      {:then loadedTxs}
-          {#each loadedTxs as tx}
-          <tr>
-              <td style="width: 70%">{tx.id} <span class="status {tx.status}"></span></td>
-              <td style="width: 20%">{roundCurrency(tx.amount)} AR</td>
-          </tr>
-          {/each}
-      {/await}
+    <tr>
+      <th style="text-transform: none">TxID</th>
+      <th>Amount</th>
+    </tr>
+    {#await transactions}
+      <p>Loading...</p>
+    {:then loadedTxs}
+      {#each loadedTxs as tx}
+        <tr>
+          <td style="width: 70%">{tx.id} <span class="status {tx.status}"></span></td>
+          <td style="width: 20%">{roundCurrency(tx.amount)} AR</td>
+        </tr>
+      {/each}
+    {/await}
   </table>
   <a href="/app/all-transactions" class="view-all">View all {"->"}</a>
 </div>
@@ -99,5 +99,5 @@
 
     &:first-child
       padding-top: 3.5em
-      
+
 </style>
