@@ -7,6 +7,14 @@
   import Modal from "../components/Modal.svelte";
   import { fade } from "svelte/transition";
 
+  // @ts-ignore
+  const client = new Arweave({
+    host: "arweave.net",
+    port: 443,
+    protocol: "https",
+    timeout: 20000,
+  });
+
   let selectedPost;
   let sendAmount: number = 1;
   let sendCurrency: string;
@@ -24,8 +32,13 @@
     confirmModalOpened = true;
   }
 
-  // todo exchange logic
   function confirmTrade () {
+    // TODO[@t8]: 
+      // Verify user has enough PST
+      // Create transaction
+      // Sign transaction
+      // Tip exchange
+      // Redirect to dashboard
     console.log("Confirmed trade");
   }
 
